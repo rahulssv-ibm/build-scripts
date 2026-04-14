@@ -161,8 +161,8 @@ jobs:
           bash ../gha-script/pre_process.sh
           cd $GITHUB_WORKSPACE
           gzip build_log
-          chmod +x ./gha-script/upload-scripts/upload_file.sh
-          bash ./gha-script/upload-scripts/upload_file.sh build_log.gz
+          # chmod +x ./gha-script/upload-scripts/upload_file.sh
+          # bash ./gha-script/upload-scripts/upload_file.sh build_log.gz
 
       - name: Fix permissions on package-cache
         run: |
@@ -256,9 +256,9 @@ jobs:
           fi
 
           echo "Final log file to upload: $LOG_NAME"
-          chmod +x ./gha-script/upload-scripts/upload_file.sh
-          bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
-          ls -lh "$WORKSPACE/$LOG_NAME"
+          # chmod +x ./gha-script/upload-scripts/upload_file.sh
+          # bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
+          # ls -lh "$WORKSPACE/$LOG_NAME"
   
       - name: Upload wheel artifact using custom script
         run: |
@@ -266,8 +266,8 @@ jobs:
             sudo chmod a+r *.whl
             WHEEL_FILE=$(ls *.whl)
             SHA256_VALUE=$(cat sha256.sha)
-            chmod +x ./gha-script/upload-scripts/upload_wheel.sh
-            bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
+            # chmod +x ./gha-script/upload-scripts/upload_wheel.sh
+            # bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
           else
             echo "No wheel file found!"
             exit 1
@@ -330,8 +330,8 @@ jobs:
             LOG_NAME="${PACKAGE_NAME}_${VERSION}_wheel_py310_log.gz"
           fi
 
-          chmod +x ./gha-script/upload-scripts/upload_file.sh
-          bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
+          # chmod +x ./gha-script/upload-scripts/upload_file.sh
+          # bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
 
       - name: Upload wheel artifact using custom script
         run: |
@@ -339,8 +339,8 @@ jobs:
             sudo chmod a+r *.whl
             WHEEL_FILE=$(ls *.whl)
             SHA256_VALUE=$(cat sha256.sha)
-            chmod +x ./gha-script/upload-scripts/upload_wheel.sh
-            bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
+            # chmod +x ./gha-script/upload-scripts/upload_wheel.sh
+            # bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
           else
             echo "No wheel file found!"
             exit 1
@@ -420,18 +420,18 @@ jobs:
           fi
   
           echo "Final log file to upload: $LOG_NAME"
-          chmod +x ./gha-script/upload-scripts/upload_file.sh
-          bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
-          ls -lh "$WORKSPACE/$LOG_NAME"
-  
+          # chmod +x ./gha-script/upload-scripts/upload_file.sh
+          # bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
+          # ls -lh "$WORKSPACE/$LOG_NAME"
+
       - name: Upload wheel artifact using custom script
         run: |
           if ls *.whl 1> /dev/null 2>&1; then
             sudo chmod a+r *.whl
             WHEEL_FILE=$(ls *.whl)
             SHA256_VALUE=$(cat sha256.sha)
-            chmod +x ./gha-script/upload-scripts/upload_wheel.sh
-            bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
+            # chmod +x ./gha-script/upload-scripts/upload_wheel.sh
+            # bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
           else
             echo "No wheel file found!"
             exit 1
@@ -511,18 +511,18 @@ jobs:
           fi
 
           echo "Final log file to upload: $LOG_NAME"
-          chmod +x ./gha-script/upload-scripts/upload_file.sh
-          bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
-          ls -lh "$WORKSPACE/$LOG_NAME"
-  
+          # chmod +x ./gha-script/upload-scripts/upload_file.sh
+          # bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
+          # ls -lh "$WORKSPACE/$LOG_NAME"
+
       - name: Upload wheel artifact using custom script
         run: |
           if ls *.whl 1> /dev/null 2>&1; then
             sudo chmod a+r *.whl
             WHEEL_FILE=$(ls *.whl)
             SHA256_VALUE=$(cat sha256.sha)
-            chmod +x ./gha-script/upload-scripts/upload_wheel.sh
-            bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
+            # chmod +x ./gha-script/upload-scripts/upload_wheel.sh
+            # bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
           else
             echo "No wheel file found!"
             exit 1
@@ -603,9 +603,9 @@ jobs:
           fi 
 
           echo "Final log file to upload: $LOG_NAME"
-          chmod +x ./gha-script/upload-scripts/upload_file.sh
-          bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
-          ls -lh "$WORKSPACE/$LOG_NAME"
+          # chmod +x ./gha-script/upload-scripts/upload_file.sh
+          # bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
+          # ls -lh "$WORKSPACE/$LOG_NAME"
   
       - name: Upload wheel artifact using custom script
         run: |
@@ -613,8 +613,8 @@ jobs:
             sudo chmod a+r *.whl
             WHEEL_FILE=$(ls *.whl)
             SHA256_VALUE=$(cat sha256.sha)
-            chmod +x ./gha-script/upload-scripts/upload_wheel.sh
-            bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
+            # chmod +x ./gha-script/upload-scripts/upload_wheel.sh
+            # bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
           else
             echo "No wheel file found!"
             exit 1
@@ -695,9 +695,9 @@ jobs:
           fi 
 
           echo "Final log file to upload: $LOG_NAME"
-          chmod +x ./gha-script/upload-scripts/upload_file.sh
-          bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
-          ls -lh "$WORKSPACE/$LOG_NAME"
+          # chmod +x ./gha-script/upload-scripts/upload_file.sh
+          # bash ./gha-script/upload-scripts/upload_file.sh $LOG_NAME
+          # ls -lh "$WORKSPACE/$LOG_NAME"
   
       - name: Upload wheel artifact using custom script
         run: |
@@ -705,8 +705,8 @@ jobs:
             sudo chmod a+r *.whl
             WHEEL_FILE=$(ls *.whl)
             SHA256_VALUE=$(cat sha256.sha)
-            chmod +x ./gha-script/upload-scripts/upload_wheel.sh
-            bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
+            # chmod +x ./gha-script/upload-scripts/upload_wheel.sh
+            # bash ./gha-script/upload-scripts/upload_wheel.sh $WHEEL_FILE $SHA256_VALUE
           else
             echo "No wheel file found!"
             exit 1
@@ -765,8 +765,8 @@ jobs:
             source package-cache/variable.sh
             source package-cache/scanner-env.sh
             tar cvzf wheel_scanner.tar.gz wheel_scancode
-            chmod +x ./gha-script/upload-scripts/upload_file.sh
-            bash ./gha-script/upload-scripts/upload_file.sh wheel_scanner.tar.gz
+            # chmod +x ./gha-script/upload-scripts/upload_file.sh
+            # bash ./gha-script/upload-scripts/upload_file.sh wheel_scanner.tar.gz
 
   wheel_scanner:
     if: ${{ always() && inputs.wheel_build == 'true' }}
@@ -822,8 +822,8 @@ jobs:
             source package-cache/variable.sh
             source package-cache/scanner-env.sh
             tar cvzf grype_wheel_scanner.tar.gz grype_wheel_scan
-            chmod +x ./gha-script/upload-scripts/upload_file.sh
-            bash ./gha-script/upload-scripts/upload_file.sh grype_wheel_scanner.tar.gz
+            # chmod +x ./gha-script/upload-scripts/upload_file.sh
+            # bash ./gha-script/upload-scripts/upload_file.sh grype_wheel_scanner.tar.gz
 
   
   source_scanner:
@@ -897,8 +897,8 @@ jobs:
           find source_syft -mindepth 1 -exec mv -t source {} + 2>/dev/null || true
           find source_grype -mindepth 1 -exec mv -t source {} + 2>/dev/null || true
           tar cvzf source_scanner.tar.gz source
-          chmod +x ./gha-script/upload-scripts/upload_file.sh
-          bash ./gha-script/upload-scripts/upload_file.sh source_scanner.tar.gz
+          # chmod +x ./gha-script/upload-scripts/upload_file.sh
+          # bash ./gha-script/upload-scripts/upload_file.sh source_scanner.tar.gz
 
   build_docker:
     needs: build_info 
@@ -932,8 +932,8 @@ jobs:
         run: |
           source package-cache/variable.sh
           source package-cache/scanner-env.sh
-          chmod +x ./gha-script/upload-scripts/upload_docker_image.sh
-          bash ./gha-script/upload-scripts/upload_docker_image.sh
+          # chmod +x ./gha-script/upload-scripts/upload_docker_image.sh
+          # bash ./gha-script/upload-scripts/upload_docker_image.sh
 
       - name: Archive package cache with image
         run: tar -czf package-cache.tar.gz package-cache/
@@ -1011,8 +1011,8 @@ jobs:
           find image_syft -mindepth 1 -exec mv -t image {} + 2>/dev/null || true
           find image_grype -mindepth 1 -exec mv -t image {} + 2>/dev/null || true
           tar cvzf image_scanner.tar.gz image
-          chmod +x ./gha-script/upload-scripts/upload_file.sh
-          bash ./gha-script/upload-scripts/upload_file.sh image_scanner.tar.gz
+          # chmod +x ./gha-script/upload-scripts/upload_file.sh
+          # bash ./gha-script/upload-scripts/upload_file.sh image_scanner.tar.gz
 
   final_summary:
       name: Final Summary Stage
